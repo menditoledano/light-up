@@ -52,7 +52,7 @@ export default function HeroSection() {
             animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />
-          קהילה חדשה. מרחב בטוח.
+          הזהות שלנו. הכוח שלנו.
         </motion.div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] mb-6">
@@ -80,8 +80,8 @@ export default function HeroSection() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10"
         >
-          קהילת Lightup היא הבית שלכם לחיבור לזהות היהודית ולמורשת המשותפת שלנו
-          בארגון. מרחב המקדם שיח פתוח, ציון חגי ישראל, ובניית גשרים של תקשורת והבנה.
+          כשעובדים מתחברים לשורשים שלהם, הם מביאים את המיטב. Lightup היא המקום
+          שבו זהות, ערכים ועשייה נפגשים -- ויוצרים משהו שגדול מכולנו.
         </motion.p>
 
         <motion.div

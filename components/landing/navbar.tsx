@@ -53,7 +53,7 @@ export default function Navbar() {
             <img
               src={LOGO_URL}
               alt="Lightup Logo"
-              className="h-9 w-auto object-contain brightness-0 invert"
+              className="h-9 w-auto object-contain"
             />
           ) : (
             <span className="text-xl font-extrabold tracking-tight text-white">

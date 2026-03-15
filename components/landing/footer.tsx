@@ -39,9 +39,9 @@ export default function Footer() {
             <motion.img
               src={LOGO_URL}
               alt="Lightup Logo"
-              className="h-12 w-auto mx-auto object-contain brightness-0 invert opacity-60"
+              className="h-12 w-auto mx-auto object-contain"
               initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 0.6, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
             />
@@ -67,7 +67,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            הצטרפו לעובדים שכבר מצאו את המקום שלהם בקהילה שלנו בתוך הארגון.
+            האור חזק יותר כשמאירים ביחד. בואו להיות חלק מהסיפור.
           </motion.p>
 
           <motion.button
