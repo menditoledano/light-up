@@ -36,7 +36,7 @@ function SparkCard({ spark, index }: { spark: LightupSpark; index: number }) {
         )}
       </div>
 
-      <h3 className="text-lg font-bold text-neutral-900 mb-4 leading-snug group-hover:text-[#9A7B1A] transition-colors">
+      <h3 className="text-lg font-bold text-neutral-700 mb-4 leading-snug group-hover:text-[#9A7B1A] transition-colors">
         {spark.title}
       </h3>
 
@@ -67,7 +67,7 @@ export default function SparksSection({ sparks }: SparksSectionProps) {
             <p className="text-[#B59129] text-[13px] font-semibold tracking-wide uppercase mb-3">
               תוכן מקצועי ואישי
             </p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-700">
               ניצוצות של השראה
             </h2>
             <p className="text-neutral-500 mt-3 max-w-md text-[15px] leading-relaxed">

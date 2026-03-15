@@ -67,7 +67,7 @@ export default function Navbar() {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className="text-neutral-500 hover:text-neutral-900 transition-colors px-3.5 py-2 text-[13px] font-medium rounded-lg hover:bg-neutral-50"
+              className="text-neutral-400 hover:text-neutral-700 transition-colors px-3.5 py-2 text-[13px] font-medium rounded-lg hover:bg-neutral-50"
             >
               {item.label}
             </button>
@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="w-px h-5 bg-neutral-200 mx-3" />
           <button
             onClick={() => handleNavClick('hero')}
-            className="bg-neutral-900 text-white px-5 py-2 rounded-lg font-semibold text-[13px] hover:bg-neutral-800 transition-colors"
+            className="bg-[#B59129] text-white px-5 py-2 rounded-lg font-semibold text-[13px] hover:bg-[#9A7B1A] transition-colors"
           >
             הצטרפו לקהילה
           </button>
@@ -113,7 +113,7 @@ export default function Navbar() {
             <div className="mt-2 pt-3 border-t border-neutral-100">
               <button
                 onClick={() => handleNavClick('hero')}
-                className="w-full bg-neutral-900 text-white py-2.5 rounded-lg font-semibold text-center text-[14px]"
+                className="w-full bg-[#B59129] text-white py-2.5 rounded-lg font-semibold text-center text-[14px]"
               >
                 הצטרפו לקהילה
               </button>

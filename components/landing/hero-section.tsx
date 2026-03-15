@@ -34,7 +34,7 @@ export default function HeroSection() {
           קהילה חדשה. מרחב בטוח.
         </motion.div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-neutral-900 leading-[1.08] mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-neutral-700 leading-[1.08] mb-6">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,13 +71,13 @@ export default function HeroSection() {
         >
           <button
             onClick={() => scrollToSection('vision')}
-            className="w-full sm:w-auto px-7 py-3 bg-neutral-900 text-white font-semibold rounded-lg text-[15px] hover:bg-neutral-800 transition-colors"
+            className="w-full sm:w-auto px-7 py-3 bg-[#B59129] text-white font-semibold rounded-lg text-[15px] hover:bg-[#9A7B1A] transition-colors"
           >
             גלו את הקהילה
           </button>
           <button
             onClick={() => scrollToSection('events')}
-            className="w-full sm:w-auto px-7 py-3 bg-white border border-neutral-200 text-neutral-700 font-semibold rounded-lg text-[15px] hover:border-neutral-300 hover:bg-neutral-50 transition-all"
+            className="w-full sm:w-auto px-7 py-3 bg-white border border-neutral-200 text-neutral-500 font-semibold rounded-lg text-[15px] hover:border-neutral-300 hover:bg-neutral-50 transition-all"
           >
             לאירועים הקרובים
           </button>

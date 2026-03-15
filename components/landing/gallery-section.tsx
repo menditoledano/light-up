@@ -63,7 +63,7 @@ export default function GallerySection({ items }: GallerySectionProps) {
             <p className="text-[#B59129] text-[13px] font-semibold tracking-wide uppercase mb-3">
               הקהילה בפעולה
             </p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-700">
               הצצה לפעילויות שלנו
             </h2>
             <p className="text-neutral-500 mt-3 max-w-md text-[15px] leading-relaxed">

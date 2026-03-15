@@ -22,7 +22,7 @@ function SwagItem({ icon: Icon, name, desc, index }: { icon: typeof Gift; name: 
       <div className="w-11 h-11 rounded-xl bg-[#D4AF37]/8 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#D4AF37]/12 transition-colors">
         <Icon size={22} className="text-[#B59129]" strokeWidth={1.5} />
       </div>
-      <h4 className="font-bold text-neutral-900 text-[14px] mb-1 group-hover:text-[#9A7B1A] transition-colors">
+      <h4 className="font-bold text-neutral-700 text-[14px] mb-1 group-hover:text-[#9A7B1A] transition-colors">
         {name}
       </h4>
       <p className="text-neutral-400 text-[13px]">{desc}</p>
@@ -46,7 +46,7 @@ export default function SwagSection() {
               <div className="inline-flex p-3 bg-[#D4AF37]/8 rounded-xl">
                 <ShoppingBag size={28} className="text-[#B59129]" strokeWidth={1.5} />
               </div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-700">
                 חנות הקהילה
               </h2>
               <p className="text-neutral-500 text-[15px] leading-relaxed">
@@ -54,7 +54,7 @@ export default function SwagSection() {
                 תוכלו להזמין במרוכז מארזי שי, פריטי אווירה לחלל המשרד, וכיבוד מותאם
                 למפגשי גיבוש קהילתיים שפתוחים לכולם.
               </p>
-              <button className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-2.5 rounded-lg font-semibold text-[14px] hover:bg-neutral-800 transition-colors">
+              <button className="inline-flex items-center gap-2 bg-[#B59129] text-white px-6 py-2.5 rounded-lg font-semibold text-[14px] hover:bg-[#9A7B1A] transition-colors">
                 למעבר לחנות המרכזית <ExternalLink size={15} />
               </button>
             </div>

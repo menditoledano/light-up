@@ -28,7 +28,7 @@ export default function TorahSection() {
               <p className="text-[#B59129] text-[13px] font-semibold tracking-wide uppercase mb-3">
                 השראה שבועית
               </p>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-4">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-700 mb-4">
                 לחבר ערכים לעשייה
               </h2>
               <p className="text-neutral-500 text-[15px] leading-relaxed mb-8">
@@ -36,7 +36,7 @@ export default function TorahSection() {
                 והערכים היהודיים לאתגרים היומיומיים שלנו בסביבת העבודה, פיתוח מנהיגות,
                 וצמיחה אישית מתוך דיאלוג פתוח.
               </p>
-              <button className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-2.5 rounded-lg font-semibold text-[14px] hover:bg-neutral-800 transition-colors">
+              <button className="inline-flex items-center gap-2 bg-[#B59129] text-white px-6 py-2.5 rounded-lg font-semibold text-[14px] hover:bg-[#9A7B1A] transition-colors">
                 לקריאת פרשת השבוע <ChevronLeft size={16} />
               </button>
             </div>

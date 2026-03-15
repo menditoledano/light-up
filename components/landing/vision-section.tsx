@@ -24,7 +24,7 @@ function PillarCard({ icon, title, desc, index }: PillarProps) {
         {icon}
       </div>
 
-      <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-[#9A7B1A] transition-colors">
+      <h3 className="text-xl font-bold text-neutral-700 mb-3 group-hover:text-[#9A7B1A] transition-colors">
         {title}
       </h3>
       <p className="text-neutral-500 text-[15px] leading-relaxed">{desc}</p>
@@ -64,7 +64,7 @@ export default function VisionSection() {
           <p className="text-[#B59129] text-[13px] font-semibold tracking-wide uppercase mb-3">
             מי אנחנו
           </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-700 mb-4">
             השאיפות שלנו
           </h2>
           <p className="text-neutral-500 max-w-lg mx-auto text-[15px] leading-relaxed">

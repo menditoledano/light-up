@@ -31,13 +31,13 @@ function EventCard({ event, index }: { event: LightupEvent; index: number }) {
         <span className="block text-[11px] font-semibold uppercase tracking-wider text-[#B59129] mb-0.5">
           {event.event_month}
         </span>
-        <span className="block text-2xl font-extrabold text-neutral-900 leading-none">
+        <span className="block text-2xl font-extrabold text-neutral-700 leading-none">
           {event.event_day}
         </span>
       </div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="text-[15px] font-bold text-neutral-900 mb-1.5 group-hover:text-[#9A7B1A] transition-colors truncate">
+        <h3 className="text-[15px] font-bold text-neutral-700 mb-1.5 group-hover:text-[#9A7B1A] transition-colors truncate">
           {event.title}
         </h3>
         <div className="flex flex-wrap items-center gap-3 text-[13px]">
@@ -51,7 +51,7 @@ function EventCard({ event, index }: { event: LightupEvent; index: number }) {
         </div>
       </div>
 
-      <button className="hidden sm:flex items-center gap-1 px-4 py-2 bg-neutral-900 text-white font-semibold rounded-lg text-[13px] hover:bg-neutral-800 transition-colors">
+      <button className="hidden sm:flex items-center gap-1 px-4 py-2 bg-[#B59129] text-white font-semibold rounded-lg text-[13px] hover:bg-[#9A7B1A] transition-colors">
         RSVP <ChevronLeft size={12} />
       </button>
     </motion.div>
@@ -73,7 +73,7 @@ export default function EventsSection({ events }: EventsSectionProps) {
             <Calendar size={14} />
             לוח אירועים
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-700 mb-3">
             מאירים ביחד
           </h2>
           <p className="text-neutral-500 max-w-lg mx-auto text-[15px]">

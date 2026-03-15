@@ -20,7 +20,7 @@ function scrollToSection(id: string) {
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 pt-20 pb-10 px-6">
+    <footer className="bg-neutral-800 pt-20 pb-10 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,12 +48,12 @@ export default function Footer() {
             הצטרפו לעובדים שכבר מצאו את המקום שלהם בקהילה שלנו בתוך הארגון.
           </p>
 
-          <button className="px-7 py-3 bg-white text-neutral-900 font-semibold rounded-lg text-[15px] hover:bg-neutral-100 transition-colors inline-flex items-center gap-2">
+          <button className="px-7 py-3 bg-[#D4AF37] text-white font-semibold rounded-lg text-[15px] hover:bg-[#B59129] transition-colors inline-flex items-center gap-2">
             הגש בקשת הצטרפות <ChevronLeft size={16} />
           </button>
         </motion.div>
 
-        <div className="mt-16 pt-6 border-t border-neutral-800">
+        <div className="mt-16 pt-6 border-t border-neutral-700">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap items-center justify-center gap-5">
               {footerLinks.map((link) => (
