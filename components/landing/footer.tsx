@@ -42,9 +42,14 @@ export default function Footer() {
             האור חזק יותר כשמאירים ביחד. בואו להיות חלק מהסיפור.
           </p>
 
-          <button className="px-7 py-3 bg-[#D4AF37] text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-[#F0D060] transition-all hover:shadow-[0_10px_30px_rgba(212,175,55,0.3)] inline-flex items-center gap-2">
+          <a
+            href="https://forms.gle/Ru6tAp49hKuwQbc27"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-7 py-3 bg-[#D4AF37] text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-[#F0D060] transition-all hover:shadow-[0_10px_30px_rgba(212,175,55,0.3)] inline-flex items-center gap-2"
+          >
             הגש בקשת הצטרפות <ChevronLeft size={16} />
-          </button>
+          </a>
         </motion.div>
 
         <div className="mt-16 pt-6 border-t border-slate-800/60">

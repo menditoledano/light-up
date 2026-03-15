@@ -102,12 +102,14 @@ export default function Navbar() {
             </button>
           ))}
           <div className="w-px h-5 bg-slate-800 mx-3" />
-          <button
-            onClick={() => handleNavClick('hero')}
+          <a
+            href="https://forms.gle/Ru6tAp49hKuwQbc27"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#D4AF37] text-[#0B0F1A] px-5 py-2 rounded-lg font-bold text-[13px] hover:bg-[#F0D060] transition-colors"
           >
             הצטרפו לקהילה
-          </button>
+          </a>
         </div>
 
         <button
@@ -140,12 +142,14 @@ export default function Navbar() {
               </motion.button>
             ))}
             <div className="mt-2 pt-3 border-t border-slate-800/60">
-              <button
-                onClick={() => handleNavClick('hero')}
-                className="w-full bg-[#D4AF37] text-[#0B0F1A] py-2.5 rounded-lg font-bold text-center text-[14px]"
+              <a
+                href="https://forms.gle/Ru6tAp49hKuwQbc27"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-[#D4AF37] text-[#0B0F1A] py-2.5 rounded-lg font-bold text-center text-[14px]"
               >
                 הצטרפו לקהילה
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
