@@ -20,7 +20,7 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -4 }}
-      className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer border border-slate-800/40 hover:border-[#D4AF37]/20 transition-colors"
+      className="group relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer border border-slate-800/40 hover:border-[#D4AF37]/20 transition-colors"
     >
       <img
         src={item.image_url}
@@ -28,18 +28,18 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A]/90 via-[#0B0F1A]/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex flex-col justify-end p-5">
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A]/90 via-[#0B0F1A]/30 to-transparent opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-400 flex flex-col justify-end p-4 sm:p-5">
         <motion.p
-          className="text-white font-bold text-[15px] mb-0.5 translate-y-4 group-hover:translate-y-0 transition-transform duration-400"
+          className="text-white font-bold text-[14px] sm:text-[15px] mb-0.5 sm:translate-y-4 sm:group-hover:translate-y-0 transition-transform duration-400"
         >
           {item.title}
         </motion.p>
-        <p className="text-slate-400 text-[13px] translate-y-4 group-hover:translate-y-0 transition-transform duration-400 delay-75">
+        <p className="text-slate-400 text-[12px] sm:text-[13px] sm:translate-y-4 sm:group-hover:translate-y-0 transition-transform duration-400 delay-75">
           {item.date_label}
         </p>
-        <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
-          <div className="w-9 h-9 rounded-lg bg-[#D4AF37]/20 backdrop-blur-sm flex items-center justify-center">
-            <Eye size={15} className="text-[#D4AF37]" />
+        <div className="absolute top-3 left-3 sm:top-4 sm:left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 hidden sm:block">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#D4AF37]/20 backdrop-blur-sm flex items-center justify-center">
+            <Eye size={14} className="text-[#D4AF37] sm:w-[15px] sm:h-[15px]" />
           </div>
         </div>
       </div>
@@ -49,10 +49,10 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
 
 export default function GallerySection() {
   return (
-    <section id="gallery" className="py-14 px-6 bg-[#0D1220] relative overflow-hidden">
+    <section id="gallery" className="py-10 sm:py-14 px-4 sm:px-6 bg-[#0D1220] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-30" />
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12 gap-4 sm:gap-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function GallerySection() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.p
-              className="text-[#D4AF37] text-[13px] font-semibold tracking-wide uppercase mb-3"
+              className="text-[#D4AF37] text-[12px] sm:text-[13px] font-semibold tracking-wide uppercase mb-2 sm:mb-3"
               initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function GallerySection() {
               הקהילה בפעולה
             </motion.p>
             <motion.h2
-              className="text-3xl md:text-4xl font-extrabold text-slate-100"
+              className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100"
               initial={{ opacity: 0, y: 15, filter: 'blur(6px)' }}
               whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               viewport={{ once: true }}
@@ -78,7 +78,7 @@ export default function GallerySection() {
               הצצה לפעילויות שלנו
             </motion.h2>
             <motion.p
-              className="text-slate-500 mt-3 max-w-md text-[15px] leading-relaxed"
+              className="text-slate-500 mt-2 sm:mt-3 max-w-md text-[14px] sm:text-[15px] leading-relaxed"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -88,7 +88,7 @@ export default function GallerySection() {
             </motion.p>
           </motion.div>
           <motion.button
-            className="text-slate-300 font-semibold flex items-center gap-1.5 text-[14px] border border-slate-700 px-5 py-2.5 rounded-lg hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all"
+            className="text-slate-300 font-semibold flex items-center gap-1.5 text-[13px] sm:text-[14px] border border-slate-700 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all w-full sm:w-auto justify-center sm:justify-start"
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -100,7 +100,7 @@ export default function GallerySection() {
           </motion.button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {galleryItems.map((item, i) => (
             <GalleryCard key={item.id} item={item} index={i} />
           ))}

@@ -18,16 +18,16 @@ function PillarCard({ icon, title, desc, index }: PillarProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-8 hover:border-[#D4AF37]/20 hover:-translate-y-1 transition-all duration-300"
+      className="group relative bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-5 sm:p-8 hover:border-[#D4AF37]/20 hover:-translate-y-1 transition-all duration-300"
     >
-      <div className="w-11 h-11 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 text-[#D4AF37] group-hover:bg-[#D4AF37]/15 transition-colors">
+      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-4 sm:mb-6 text-[#D4AF37] group-hover:bg-[#D4AF37]/15 transition-colors">
         {icon}
       </div>
 
-      <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-[#D4AF37] transition-colors">
+      <h3 className="text-lg sm:text-xl font-bold text-slate-100 mb-2 sm:mb-3 group-hover:text-[#D4AF37] transition-colors">
         {title}
       </h3>
-      <p className="text-slate-500 text-[15px] leading-relaxed">{desc}</p>
+      <p className="text-slate-500 text-[14px] sm:text-[15px] leading-relaxed">{desc}</p>
 
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] w-0 group-hover:w-[60%] bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent rounded-full transition-all duration-500" />
     </motion.div>
@@ -54,7 +54,7 @@ const pillars = [
 
 export default function VisionSection() {
   return (
-    <section id="vision" className="py-14 px-6 bg-[#0D1220] relative overflow-hidden">
+    <section id="vision" className="py-10 sm:py-14 px-4 sm:px-6 bg-[#0D1220] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-50" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -62,20 +62,20 @@ export default function VisionSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <p className="text-[#D4AF37] text-[13px] font-semibold tracking-wide uppercase mb-3">
+          <p className="text-[#D4AF37] text-[12px] sm:text-[13px] font-semibold tracking-wide uppercase mb-2 sm:mb-3">
             מי אנחנו
           </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-100 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 mb-3 sm:mb-4">
             השאיפות שלנו
           </h2>
-          <p className="text-slate-500 max-w-lg mx-auto text-[15px] leading-relaxed">
+          <p className="text-slate-500 max-w-lg mx-auto text-[14px] sm:text-[15px] leading-relaxed px-2 sm:px-0">
             בנינו את Lightup על בסיס שלושה עמודי תווך שנועדו להעצים כל עובד ועובדת.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
           {pillars.map((pillar, i) => (
             <PillarCard
               key={pillar.title}

@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-14 overflow-hidden bg-[#0B0F1A]"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-14 overflow-hidden bg-[#0B0F1A]"
     >
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A] via-transparent to-[#0B0F1A] pointer-events-none" />
@@ -33,12 +33,12 @@ export default function HeroSection() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 max-w-3xl mx-auto"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] text-[13px] font-semibold mb-8">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] text-[12px] sm:text-[13px] font-semibold mb-6 sm:mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
           הזהות שלנו. הכוח שלנו.
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.12] sm:leading-[1.08] mb-5 sm:mb-6">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10"
+          className="text-slate-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed mb-8 sm:mb-10 px-2 sm:px-0"
         >
           כשעובדים מתחברים לשורשים שלהם, הם מביאים את המיטב. Lightup היא המקום
           שבו זהות, ערכים ועשייה נפגשים - ויוצרים משהו שגדול מכולנו.
@@ -75,13 +75,13 @@ export default function HeroSection() {
         >
           <button
             onClick={() => scrollToSection('vision')}
-            className="w-full sm:w-auto px-7 py-3 bg-[#D4AF37] text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-[#F0D060] transition-all hover:shadow-[0_8px_30px_rgba(212,175,55,0.3)]"
+            className="w-full sm:w-auto px-6 sm:px-7 py-2.5 sm:py-3 bg-[#D4AF37] text-[#0B0F1A] font-bold rounded-lg text-[14px] sm:text-[15px] hover:bg-[#F0D060] transition-all hover:shadow-[0_8px_30px_rgba(212,175,55,0.3)]"
           >
             גלו את הקהילה
           </button>
           <button
             onClick={() => scrollToSection('events')}
-            className="w-full sm:w-auto px-7 py-3 bg-transparent border border-slate-700 text-slate-300 font-semibold rounded-lg text-[15px] hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all"
+            className="w-full sm:w-auto px-6 sm:px-7 py-2.5 sm:py-3 bg-transparent border border-slate-700 text-slate-300 font-semibold rounded-lg text-[14px] sm:text-[15px] hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all"
           >
             לאירועים הקרובים
           </button>
