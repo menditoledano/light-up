@@ -1,14 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Camera, ChevronLeft, Eye } from 'lucide-react';
-import type { LightupGalleryItem } from '@/lib/types';
+import { ChevronLeft, Eye } from 'lucide-react';
 
-interface GallerySectionProps {
-  items: LightupGalleryItem[];
-}
+const galleryItems = [
+  { id: '1', title: 'הרמת כוסית לפסח', date_label: 'מרץ 2024', image_url: '/IMG_0732.jpg' },
+  { id: '2', title: 'הדלקת נרות חנוכה', date_label: 'דצמבר 2023', image_url: '/IMG_6087.jpg' },
+  { id: '3', title: 'מפגש נטוורקינג וחיבורים', date_label: 'ינואר 2024', image_url: '/IMG_9164.JPG' },
+  { id: '4', title: 'חלוקת מצה שמורה לכל העובדים', date_label: 'אפריל 2024', image_url: '/e104249c-8acc-4919-950f-aac3e4a01ce7.jpg' },
+];
 
-function GalleryCard({ item, index }: { item: LightupGalleryItem; index: number }) {
+type GalleryItem = typeof galleryItems[number];
+
+function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
@@ -18,23 +22,11 @@ function GalleryCard({ item, index }: { item: LightupGalleryItem; index: number 
       whileHover={{ y: -4 }}
       className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer border border-slate-800/40 hover:border-[#D4AF37]/20 transition-colors"
     >
-      {item.image_url ? (
-        <img
-          src={item.image_url}
-          alt={item.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-        />
-      ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-[#111827] flex flex-col items-center justify-center p-6 text-center">
-          <motion.div
-            className="w-14 h-14 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center mb-3"
-            whileHover={{ rotate: 12, scale: 1.1 }}
-          >
-            <Camera size={24} className="text-slate-500" strokeWidth={1.5} />
-          </motion.div>
-          <span className="text-[13px] text-slate-500">{item.placeholder_text}</span>
-        </div>
-      )}
+      <img
+        src={item.image_url}
+        alt={item.title}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      />
 
       <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A]/90 via-[#0B0F1A]/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex flex-col justify-end p-5">
         <motion.p
@@ -55,7 +47,7 @@ function GalleryCard({ item, index }: { item: LightupGalleryItem; index: number 
   );
 }
 
-export default function GallerySection({ items }: GallerySectionProps) {
+export default function GallerySection() {
   return (
     <section id="gallery" className="py-14 px-6 bg-[#0D1220] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-30" />
@@ -109,7 +101,7 @@ export default function GallerySection({ items }: GallerySectionProps) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {items.map((item, i) => (
+          {galleryItems.map((item, i) => (
             <GalleryCard key={item.id} item={item} index={i} />
           ))}
         </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Loader as Loader2 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
-import type { LightupSpark, LightupEvent, LightupGalleryItem } from '@/lib/types';
+import type { LightupSpark, LightupEvent } from '@/lib/types';
 import Navbar from '@/components/landing/navbar';
 import HeroSection from '@/components/landing/hero-section';
 import VisionSection from '@/components/landing/vision-section';
@@ -19,7 +19,6 @@ import SectionDivider from '@/components/landing/section-divider';
 export default function Home() {
   const [sparks, setSparks] = useState<LightupSpark[]>([]);
   const [events, setEvents] = useState<LightupEvent[]>([]);
-  const [gallery, setGallery] = useState<LightupGalleryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -30,16 +29,13 @@ export default function Home() {
     const [
       { data: sparksData },
       { data: eventsData },
-      { data: galleryData },
     ] = await Promise.all([
       supabase.from('lightup_sparks').select('*').order('sort_order'),
       supabase.from('lightup_events').select('*').order('sort_order'),
-      supabase.from('lightup_gallery').select('*').order('sort_order'),
     ]);
 
     if (sparksData) setSparks(sparksData);
     if (eventsData) setEvents(eventsData);
-    if (galleryData) setGallery(galleryData);
     setIsLoading(false);
   };
 
@@ -70,7 +66,7 @@ export default function Home() {
       <SectionDivider variant="dark-b-to-a" />
       <EventsSection events={events} />
       <SectionDivider variant="dark-a-to-b" />
-      <GallerySection items={gallery} />
+      <GallerySection />
       <SectionDivider variant="dark-b-to-a" />
       <SwagSection />
       <SectionDivider variant="dark-to-footer" />
