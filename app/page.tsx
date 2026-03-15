@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Loader as Loader2 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import type { LightupSpark, LightupEvent } from '@/lib/types';
 import Navbar from '@/components/landing/navbar';
@@ -19,39 +17,16 @@ import SectionDivider from '@/components/landing/section-divider';
 export default function Home() {
   const [sparks, setSparks] = useState<LightupSpark[]>([]);
   const [events, setEvents] = useState<LightupEvent[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    loadData();
-  }, []);
-
-  const loadData = async () => {
-    const [
-      { data: sparksData },
-      { data: eventsData },
-    ] = await Promise.all([
+    Promise.all([
       supabase.from('lightup_sparks').select('*').order('sort_order'),
       supabase.from('lightup_events').select('*').order('sort_order'),
-    ]);
-
-    if (sparksData) setSparks(sparksData);
-    if (eventsData) setEvents(eventsData);
-    setIsLoading(false);
-  };
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-[#0B0F1A] flex items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center"
-        >
-          <Loader2 className="w-5 h-5 text-[#D4AF37]/50 mx-auto animate-spin" />
-        </motion.div>
-      </div>
-    );
-  }
+    ]).then(([{ data: sparksData }, { data: eventsData }]) => {
+      if (sparksData) setSparks(sparksData);
+      if (eventsData) setEvents(eventsData);
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0B0F1A] text-slate-100 overflow-x-hidden">

@@ -14,33 +14,22 @@ interface PillarProps {
 function PillarCard({ icon, title, desc, index }: PillarProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, scale: 0.95 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ delay: index * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(212, 175, 55, 0.06)' }}
-      className="group relative bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-8 hover:border-[#D4AF37]/20 transition-all duration-300"
+      transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className="group relative bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-8 hover:border-[#D4AF37]/20 hover:-translate-y-1 transition-all duration-300"
     >
-      <motion.div
-        className="w-11 h-11 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 text-[#D4AF37] group-hover:bg-[#D4AF37]/15 transition-colors"
-        whileHover={{ rotate: [0, -8, 8, 0], scale: 1.1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="w-11 h-11 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 text-[#D4AF37] group-hover:bg-[#D4AF37]/15 transition-colors">
         {icon}
-      </motion.div>
+      </div>
 
       <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-[#D4AF37] transition-colors">
         {title}
       </h3>
       <p className="text-slate-500 text-[15px] leading-relaxed">{desc}</p>
 
-      <motion.div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent rounded-full"
-        initial={{ width: 0 }}
-        whileInView={{ width: '60%' }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3 + index * 0.15, duration: 0.8 }}
-      />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] w-0 group-hover:w-[60%] bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent rounded-full transition-all duration-500" />
     </motion.div>
   );
 }
@@ -69,39 +58,21 @@ export default function VisionSection() {
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-50" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <motion.p
-            className="text-[#D4AF37] text-[13px] font-semibold tracking-wide uppercase mb-3"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-          >
+          <p className="text-[#D4AF37] text-[13px] font-semibold tracking-wide uppercase mb-3">
             מי אנחנו
-          </motion.p>
-          <motion.h2
-            className="text-3xl md:text-4xl font-extrabold text-slate-100 mb-4"
-            initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-          >
+          </p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-100 mb-4">
             השאיפות שלנו
-          </motion.h2>
-          <motion.p
-            className="text-slate-500 max-w-lg mx-auto text-[15px] leading-relaxed"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.35, duration: 0.6 }}
-          >
+          </h2>
+          <p className="text-slate-500 max-w-lg mx-auto text-[15px] leading-relaxed">
             בנינו את Lightup על בסיס שלושה עמודי תווך שנועדו להעצים כל עובד ועובדת.
-          </motion.p>
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
