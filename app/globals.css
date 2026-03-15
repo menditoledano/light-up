@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 45 73% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 97%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 40 10% 96%;
+    --muted-foreground: 215 14% 45%;
+    --accent: 43 68% 43%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 92%;
+    --input: 40 20% 92%;
+    --ring: 45 73% 52%;
+    --chart-1: 45 73% 52%;
+    --chart-2: 43 68% 43%;
+    --chart-3: 30 76% 50%;
+    --chart-4: 50 60% 55%;
+    --chart-5: 35 65% 48%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#FAFAFA] text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.25);
+    color: #1A1A1A;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #B59129, #D4AF37, #E6C84D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.12), 0 0 60px rgba(212, 175, 55, 0.05);
+  }
+
+  .gold-glow-sm {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+  }
+
+  .gold-glow-lg {
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.2), 0 0 100px rgba(212, 175, 55, 0.08);
+  }
+
+  .card-premium {
+    background: white;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .card-premium:hover {
+    border-color: rgba(212, 175, 55, 0.25);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.08), 0 8px 20px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+  }
+
+  .gold-gradient-bar {
+    background: linear-gradient(90deg, #D4AF37, #E6C84D, #D4AF37);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .section-divider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 2px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.4);
+  }
+}
