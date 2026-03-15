@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-20 overflow-hidden bg-[#0B0F1A]"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-14 overflow-hidden bg-[#0B0F1A]"
     >
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A] via-transparent to-[#0B0F1A] pointer-events-none" />

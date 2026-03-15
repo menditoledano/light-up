@@ -74,7 +74,7 @@ function SparkCard({ spark, index }: { spark: LightupSpark; index: number }) {
 
 export default function SparksSection({ sparks }: SparksSectionProps) {
   return (
-    <section id="sparks" className="py-24 px-6 bg-[#0D1220] relative overflow-hidden">
+    <section id="sparks" className="py-14 px-6 bg-[#0D1220] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-30" />
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">

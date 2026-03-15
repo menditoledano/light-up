@@ -20,7 +20,7 @@ function scrollToSection(id: string) {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#060911] pt-20 pb-10 px-6 relative overflow-hidden">
+    <footer className="bg-[#060911] pt-14 pb-10 px-6 relative overflow-hidden">
       <motion.div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] rounded-full bg-[#D4AF37]/[0.03] blur-[100px] pointer-events-none"
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}

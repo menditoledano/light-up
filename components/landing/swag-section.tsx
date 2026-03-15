@@ -37,7 +37,7 @@ function SwagItem({ icon: Icon, name, desc, index }: { icon: typeof Gift; name: 
 
 export default function SwagSection() {
   return (
-    <section id="swag" className="py-24 px-6 bg-[#0B0F1A] relative overflow-hidden">
+    <section id="swag" className="py-14 px-6 bg-[#0B0F1A] relative overflow-hidden">
       <motion.div
         className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-[#D4AF37]/[0.03] blur-[100px] pointer-events-none"
         animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}

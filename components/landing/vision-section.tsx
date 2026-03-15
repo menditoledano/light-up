@@ -65,7 +65,7 @@ const pillars = [
 
 export default function VisionSection() {
   return (
-    <section id="vision" className="py-24 px-6 bg-[#0D1220] relative overflow-hidden">
+    <section id="vision" className="py-14 px-6 bg-[#0D1220] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-50" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div

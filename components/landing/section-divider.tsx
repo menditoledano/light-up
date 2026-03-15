@@ -11,7 +11,7 @@ export default function SectionDivider({ variant = 'dark-a-to-b' }: SectionDivid
   const bgTo = variant === 'dark-b-to-a' ? 'to-[#0B0F1A]' : variant === 'dark-to-footer' ? 'to-[#060911]' : 'to-[#0D1220]';
 
   return (
-    <div className={`relative h-16 bg-gradient-to-b ${bgFrom} ${bgTo}`}>
+    <div className={`relative h-8 bg-gradient-to-b ${bgFrom} ${bgTo}`}>
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center">
         <motion.div
           className="flex items-center gap-3"

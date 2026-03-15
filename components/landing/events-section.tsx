@@ -67,7 +67,7 @@ function EventCard({ event, index }: { event: LightupEvent; index: number }) {
 
 export default function EventsSection({ events }: EventsSectionProps) {
   return (
-    <section id="events" className="py-24 px-6 bg-[#0B0F1A] relative overflow-hidden">
+    <section id="events" className="py-14 px-6 bg-[#0B0F1A] relative overflow-hidden">
       <motion.div
         className="absolute top-0 left-1/4 w-[300px] h-[300px] rounded-full bg-[#D4AF37]/[0.03] blur-[100px] pointer-events-none"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}

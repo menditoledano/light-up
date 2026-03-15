@@ -7,7 +7,7 @@ export default function TorahSection() {
   return (
     <section
       id="torah"
-      className="py-24 px-6 bg-[#0B0F1A] relative overflow-hidden"
+      className="py-14 px-6 bg-[#0B0F1A] relative overflow-hidden"
     >
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-[#D4AF37]/[0.03] blur-[120px] pointer-events-none"
