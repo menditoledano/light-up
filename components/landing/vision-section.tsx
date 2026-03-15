@@ -18,24 +18,24 @@ function PillarCard({ icon, title, desc, index }: PillarProps) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ delay: index * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(0,0,0,0.06)' }}
-      className="group relative bg-white border border-neutral-100 rounded-2xl p-8 hover:border-neutral-200 transition-all duration-300"
+      whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(45, 212, 191, 0.06)' }}
+      className="group relative bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-8 hover:border-teal-500/20 transition-all duration-300"
     >
       <motion.div
-        className="w-11 h-11 rounded-xl bg-[#D4AF37]/8 flex items-center justify-center mb-6 text-[#B59129] group-hover:bg-[#D4AF37]/12 transition-colors"
+        className="w-11 h-11 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 text-teal-400 group-hover:bg-teal-500/15 transition-colors"
         whileHover={{ rotate: [0, -8, 8, 0], scale: 1.1 }}
         transition={{ duration: 0.5 }}
       >
         {icon}
       </motion.div>
 
-      <h3 className="text-xl font-bold text-neutral-700 mb-3 group-hover:text-[#9A7B1A] transition-colors">
+      <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-teal-400 transition-colors">
         {title}
       </h3>
-      <p className="text-neutral-500 text-[15px] leading-relaxed">{desc}</p>
+      <p className="text-slate-500 text-[15px] leading-relaxed">{desc}</p>
 
       <motion.div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent rounded-full"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-teal-500/30 to-transparent rounded-full"
         initial={{ width: 0 }}
         whileInView={{ width: '60%' }}
         viewport={{ once: true }}
@@ -65,8 +65,9 @@ const pillars = [
 
 export default function VisionSection() {
   return (
-    <section id="vision" className="py-24 px-6 bg-[#FAFAF9]">
-      <div className="max-w-6xl mx-auto">
+    <section id="vision" className="py-24 px-6 bg-[#0D1220] relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-50" />
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +76,7 @@ export default function VisionSection() {
           className="text-center mb-16"
         >
           <motion.p
-            className="text-[#B59129] text-[13px] font-semibold tracking-wide uppercase mb-3"
+            className="text-teal-400 text-[13px] font-semibold tracking-wide uppercase mb-3"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -84,7 +85,7 @@ export default function VisionSection() {
             מי אנחנו
           </motion.p>
           <motion.h2
-            className="text-3xl md:text-4xl font-extrabold text-neutral-700 mb-4"
+            className="text-3xl md:text-4xl font-extrabold text-slate-100 mb-4"
             initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
             whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             viewport={{ once: true }}
@@ -93,7 +94,7 @@ export default function VisionSection() {
             השאיפות שלנו
           </motion.h2>
           <motion.p
-            className="text-neutral-500 max-w-lg mx-auto text-[15px] leading-relaxed"
+            className="text-slate-500 max-w-lg mx-auto text-[15px] leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

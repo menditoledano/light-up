@@ -45,35 +45,35 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-[#0B0F1A] flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="text-center"
         >
-          <Loader2 className="w-5 h-5 text-neutral-300 mx-auto animate-spin" />
+          <Loader2 className="w-5 h-5 text-teal-500/50 mx-auto animate-spin" />
         </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900 overflow-x-hidden">
+    <div className="min-h-screen bg-[#0B0F1A] text-slate-100 overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <SectionDivider variant="light-to-muted" />
+      <SectionDivider variant="dark-a-to-b" />
       <VisionSection />
-      <SectionDivider variant="muted-to-light" />
+      <SectionDivider variant="dark-b-to-a" />
       <TorahSection />
-      <SectionDivider variant="light-to-muted" />
+      <SectionDivider variant="dark-a-to-b" />
       <SparksSection sparks={sparks} />
-      <SectionDivider variant="muted-to-light" />
+      <SectionDivider variant="dark-b-to-a" />
       <EventsSection events={events} />
-      <SectionDivider variant="light-to-muted" />
+      <SectionDivider variant="dark-a-to-b" />
       <GallerySection items={gallery} />
-      <SectionDivider variant="muted-to-light" />
+      <SectionDivider variant="dark-b-to-a" />
       <SwagSection />
-      <SectionDivider variant="light-to-dark" />
+      <SectionDivider variant="dark-to-footer" />
       <Footer />
     </div>
   );

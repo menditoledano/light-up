@@ -10,36 +10,29 @@ function scrollToSection(id: string) {
   }
 }
 
-const floatingOrb = {
-  animate: {
-    y: [0, -20, 0],
-    scale: [1, 1.05, 1],
-    opacity: [0.3, 0.5, 0.3],
-  },
-  transition: {
-    duration: 6,
-    repeat: Infinity,
-    ease: 'easeInOut' as const,
-  },
-};
-
 export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-20 overflow-hidden bg-[#0B0F1A]"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-amber-50/40 via-white to-white pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A] via-transparent to-[#0B0F1A] pointer-events-none" />
 
       <motion.div
-        className="absolute top-32 right-[15%] w-72 h-72 rounded-full bg-[#D4AF37]/5 blur-3xl pointer-events-none"
-        animate={floatingOrb.animate}
-        transition={floatingOrb.transition}
+        className="absolute top-32 right-[15%] w-80 h-80 rounded-full bg-teal-500/5 blur-[100px] pointer-events-none"
+        animate={{ y: [0, -20, 0], scale: [1, 1.05, 1], opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute bottom-40 left-[10%] w-56 h-56 rounded-full bg-amber-200/10 blur-3xl pointer-events-none"
+        className="absolute bottom-40 left-[10%] w-64 h-64 rounded-full bg-[#D4AF37]/5 blur-[100px] pointer-events-none"
         animate={{ y: [0, 15, 0], scale: [1, 1.08, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-teal-400/[0.02] blur-[120px] pointer-events-none"
+        animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
 
       <motion.div
@@ -52,22 +45,22 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6, type: 'spring', stiffness: 150 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/8 border border-[#D4AF37]/15 text-[#9A7B1A] text-[13px] font-semibold mb-8"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[13px] font-semibold mb-8"
         >
           <motion.span
-            className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"
+            className="w-1.5 h-1.5 rounded-full bg-teal-400"
             animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />
           קהילה חדשה. מרחב בטוח.
         </motion.div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-neutral-700 leading-[1.08] mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] mb-6">
           <motion.span
             initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="block"
+            className="block text-slate-100"
           >
             מאירים את הדרך
           </motion.span>
@@ -85,7 +78,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-neutral-500 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10"
+          className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10"
         >
           קהילת Lightup היא הבית שלכם לחיבור לזהות היהודית ולמורשת המשותפת שלנו
           בארגון. מרחב המקדם שיח פתוח, ציון חגי ישראל, ובניית גשרים של תקשורת והבנה.
@@ -99,18 +92,15 @@ export default function HeroSection() {
         >
           <motion.button
             onClick={() => scrollToSection('vision')}
-            className="w-full sm:w-auto px-7 py-3 bg-[#B59129] text-white font-semibold rounded-lg text-[15px] hover:bg-[#9A7B1A] transition-colors relative overflow-hidden group"
-            whileHover={{ scale: 1.03, boxShadow: '0 8px 30px rgba(181, 145, 41, 0.3)' }}
+            className="w-full sm:w-auto px-7 py-3 bg-teal-500 text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-teal-400 transition-colors"
+            whileHover={{ scale: 1.03, boxShadow: '0 8px 30px rgba(45, 212, 191, 0.3)' }}
             whileTap={{ scale: 0.97 }}
           >
-            <span className="relative z-10">גלו את הקהילה</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] to-[#B59129] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            />
+            גלו את הקהילה
           </motion.button>
           <motion.button
             onClick={() => scrollToSection('events')}
-            className="w-full sm:w-auto px-7 py-3 bg-white border border-neutral-200 text-neutral-500 font-semibold rounded-lg text-[15px] hover:border-neutral-300 hover:bg-neutral-50 transition-all"
+            className="w-full sm:w-auto px-7 py-3 bg-transparent border border-slate-700 text-slate-300 font-semibold rounded-lg text-[15px] hover:border-teal-500/40 hover:text-teal-400 transition-all"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -123,7 +113,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.5 }}
-        className="absolute bottom-8 cursor-pointer text-neutral-300 hover:text-neutral-500 transition-colors"
+        className="absolute bottom-8 cursor-pointer text-slate-600 hover:text-teal-400 transition-colors"
         onClick={() => scrollToSection('vision')}
       >
         <motion.div

@@ -20,9 +20,9 @@ function scrollToSection(id: string) {
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-800 pt-20 pb-10 px-6 relative overflow-hidden">
+    <footer className="bg-[#060911] pt-20 pb-10 px-6 relative overflow-hidden">
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] rounded-full bg-[#D4AF37]/3 blur-[100px] pointer-events-none"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] rounded-full bg-teal-500/[0.03] blur-[100px] pointer-events-none"
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -39,15 +39,15 @@ export default function Footer() {
             <motion.img
               src={LOGO_URL}
               alt="Lightup Logo"
-              className="h-12 w-auto mx-auto object-contain brightness-0 invert opacity-80"
+              className="h-12 w-auto mx-auto object-contain brightness-0 invert opacity-60"
               initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 0.8, scale: 1 }}
+              whileInView={{ opacity: 0.6, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
             />
           ) : (
             <span className="text-2xl font-extrabold text-white">
-              LIGHT<span className="text-[#D4AF37]">UP</span>
+              LIGHT<span className="text-teal-400">UP</span>
             </span>
           )}
 
@@ -61,7 +61,7 @@ export default function Footer() {
             מוכנים להאיר את הדרך?
           </motion.h2>
           <motion.p
-            className="text-neutral-400 text-[15px] max-w-md mx-auto leading-relaxed"
+            className="text-slate-500 text-[15px] max-w-md mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -71,12 +71,12 @@ export default function Footer() {
           </motion.p>
 
           <motion.button
-            className="px-7 py-3 bg-[#D4AF37] text-white font-semibold rounded-lg text-[15px] hover:bg-[#B59129] transition-colors inline-flex items-center gap-2"
+            className="px-7 py-3 bg-teal-500 text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-teal-400 transition-colors inline-flex items-center gap-2"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            whileHover={{ scale: 1.04, boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)' }}
+            whileHover={{ scale: 1.04, boxShadow: '0 10px 30px rgba(45, 212, 191, 0.3)' }}
             whileTap={{ scale: 0.97 }}
           >
             הגש בקשת הצטרפות <ChevronLeft size={16} />
@@ -84,7 +84,7 @@ export default function Footer() {
         </motion.div>
 
         <motion.div
-          className="mt-16 pt-6 border-t border-neutral-700"
+          className="mt-16 pt-6 border-t border-slate-800/60"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function Footer() {
                 <motion.button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-neutral-500 hover:text-neutral-300 transition-colors text-[13px] font-medium"
+                  className="text-slate-600 hover:text-teal-400 transition-colors text-[13px] font-medium"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -107,7 +107,7 @@ export default function Footer() {
                 </motion.button>
               ))}
             </div>
-            <p className="text-neutral-600 text-[13px]">
+            <p className="text-slate-700 text-[13px]">
               &copy; {new Date().getFullYear()} Lightup Community
             </p>
           </div>
