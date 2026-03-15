@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ShoppingBag, ExternalLink, Sun, Gift, PartyPopper, Shirt, UtensilsCrossed } from 'lucide-react';
+import { ShoppingBag, ExternalLink, Gift, PartyPopper, Shirt, UtensilsCrossed } from 'lucide-react';
 
 const swagCategories = [
   { icon: Gift, name: 'מארזי חג ומועדים', desc: 'מתנות מרגשות לכל חג' },
@@ -13,64 +13,57 @@ const swagCategories = [
 function SwagItem({ icon: Icon, name, desc, index }: { icon: typeof Gift; name: string; desc: string; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -6, scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className="bg-white border border-slate-100 rounded-2xl p-6 text-center hover:shadow-[0_12px_30px_rgba(212,175,55,0.1)] hover:border-[#D4AF37]/30 transition-all duration-500 cursor-pointer group"
+      viewport={{ once: true, margin: '-30px' }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+      className="group bg-white border border-neutral-100 rounded-xl p-5 text-center hover:border-neutral-200 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 cursor-pointer"
     >
-      <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37]/12 to-[#D4AF37]/4 flex items-center justify-center mx-auto mb-4 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-all duration-500">
-        <Icon size={28} className="text-[#B59129]" strokeWidth={1.5} />
+      <div className="w-11 h-11 rounded-xl bg-[#D4AF37]/8 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#D4AF37]/12 transition-colors">
+        <Icon size={22} className="text-[#B59129]" strokeWidth={1.5} />
       </div>
-      <h4 className="font-bold text-[#1A1A1A] mb-1 group-hover:text-[#B59129] transition-colors">{name}</h4>
-      <p className="text-slate-400 text-sm font-sans">{desc}</p>
+      <h4 className="font-bold text-neutral-900 text-[14px] mb-1 group-hover:text-[#9A7B1A] transition-colors">
+        {name}
+      </h4>
+      <p className="text-neutral-400 text-[13px]">{desc}</p>
     </motion.div>
   );
 }
 
 export default function SwagSection() {
   return (
-    <section id="swag" className="py-28 px-6 md:px-12 bg-white">
+    <section id="swag" className="py-24 px-6 bg-neutral-50">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.7 }}
-        className="max-w-7xl mx-auto bg-gradient-to-br from-[#FDFCF8] to-[#FAF8F2] border border-[#D4AF37]/15 rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-[0_10px_40px_rgba(212,175,55,0.05)]"
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.6 }}
+        className="max-w-5xl mx-auto"
       >
-        <div className="absolute -top-24 -right-24 text-[#D4AF37]/[0.06] pointer-events-none">
-          <Sun size={300} strokeWidth={1} />
-        </div>
-        <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#D4AF37]/4 blur-[80px] rounded-full pointer-events-none" />
-
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 relative z-10">
-          <div className="lg:w-1/2 space-y-6 text-center lg:text-right">
-            <div className="inline-flex p-4 bg-white border border-[#D4AF37]/15 rounded-2xl shadow-sm">
-              <ShoppingBag size={36} className="text-[#B59129]" strokeWidth={1.5} />
+        <div className="bg-white border border-neutral-100 rounded-2xl p-8 md:p-12">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
+            <div className="lg:w-1/2 space-y-5 text-center lg:text-right">
+              <div className="inline-flex p-3 bg-[#D4AF37]/8 rounded-xl">
+                <ShoppingBag size={28} className="text-[#B59129]" strokeWidth={1.5} />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900">
+                חנות הקהילה
+              </h2>
+              <p className="text-neutral-500 text-[15px] leading-relaxed">
+                ריכזנו עבורכם פלטפורמה אחת לציון חגי ישראל ואירועי שיא בארגון. כאן
+                תוכלו להזמין במרוכז מארזי שי, פריטי אווירה לחלל המשרד, וכיבוד מותאם
+                למפגשי גיבוש קהילתיים שפתוחים לכולם.
+              </p>
+              <button className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-2.5 rounded-lg font-semibold text-[14px] hover:bg-neutral-800 transition-colors">
+                למעבר לחנות המרכזית <ExternalLink size={15} />
+              </button>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A]">
-              חנות הקהילה
-            </h2>
-            <p className="text-slate-500 text-lg leading-relaxed font-sans">
-              ריכזנו עבורכם פלטפורמה אחת לציון חגי ישראל ואירועי שיא בארגון. כאן
-              תוכלו להזמין במרוכז מארזי שי, פריטי אווירה לחלל המשרד, וכיבוד מותאם
-              למפגשי גיבוש קהילתיים שפתוחים לכולם.
-            </p>
-            <motion.button
-              whileHover={{ y: -3, boxShadow: '0 8px 25px rgba(212,175,55,0.3)' }}
-              whileTap={{ scale: 0.96 }}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37] to-[#C9A42F] text-white px-8 py-4 rounded-full font-bold text-lg transition-all mt-2 shadow-[0_4px_20px_rgba(212,175,55,0.25)]"
-            >
-              למעבר לחנות המרכזית <ExternalLink size={18} />
-            </motion.button>
-          </div>
 
-          <div className="lg:w-1/2 grid grid-cols-2 gap-4 w-full">
-            {swagCategories.map((item, i) => (
-              <SwagItem key={item.name} icon={item.icon} name={item.name} desc={item.desc} index={i} />
-            ))}
+            <div className="lg:w-1/2 grid grid-cols-2 gap-3 w-full">
+              {swagCategories.map((item, i) => (
+                <SwagItem key={item.name} icon={item.icon} name={item.name} desc={item.desc} index={i} />
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>

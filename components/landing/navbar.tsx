@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const LOGO_URL = 'https://iili.io/qGHjtQ1.jpg';
 
@@ -26,7 +26,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -38,62 +38,54 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-[#D4AF37]/15 py-3 shadow-[0_4px_30px_rgba(0,0,0,0.04)]'
+          ? 'bg-white/95 backdrop-blur-md border-b border-neutral-100 py-3'
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <motion.div
+      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <div
           className="flex items-center gap-3 cursor-pointer"
           onClick={() => scrollToSection('hero')}
-          whileTap={{ scale: 0.97 }}
         >
           {LOGO_URL ? (
             <img
               src={LOGO_URL}
               alt="Lightup Logo"
-              className="h-10 w-auto object-contain"
+              className="h-9 w-auto object-contain"
             />
           ) : (
-            <>
-              <div className="relative">
-                <div className="absolute inset-0 bg-[#D4AF37] blur-md opacity-20 rounded-full animate-pulse" />
-                <Sun className="text-[#B59129] relative z-10" size={32} strokeWidth={2.5} />
-              </div>
-              <span className="text-2xl font-black tracking-tight text-[#1A1A1A]">
-                LIGHT<span className="text-[#B59129]">UP</span>
-              </span>
-            </>
+            <span className="text-xl font-extrabold tracking-tight text-neutral-900">
+              LIGHT<span className="text-[#B59129]">UP</span>
+            </span>
           )}
-        </motion.div>
+        </div>
 
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-0.5">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className="relative text-slate-600 hover:text-[#B59129] transition-colors px-4 py-2 rounded-full text-sm font-medium hover:bg-[#D4AF37]/6"
+              className="text-neutral-500 hover:text-neutral-900 transition-colors px-3.5 py-2 text-[13px] font-medium rounded-lg hover:bg-neutral-50"
             >
               {item.label}
             </button>
           ))}
-          <div className="w-px h-6 bg-slate-200 mx-2" />
-          <motion.button
-            whileHover={{ y: -2, boxShadow: '0 4px 16px rgba(212,175,55,0.25)' }}
-            whileTap={{ scale: 0.96 }}
-            className="bg-gradient-to-r from-[#D4AF37] to-[#C9A42F] text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-[0_2px_10px_rgba(212,175,55,0.2)] transition-all"
+          <div className="w-px h-5 bg-neutral-200 mx-3" />
+          <button
+            onClick={() => handleNavClick('hero')}
+            className="bg-neutral-900 text-white px-5 py-2 rounded-lg font-semibold text-[13px] hover:bg-neutral-800 transition-colors"
           >
             הצטרפו לקהילה
-          </motion.button>
+          </button>
         </div>
 
         <button
-          className="md:hidden relative w-10 h-10 rounded-xl bg-[#D4AF37]/8 flex items-center justify-center text-[#B59129]"
+          className="md:hidden w-9 h-9 rounded-lg bg-neutral-100 flex items-center justify-center text-neutral-600"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
@@ -103,25 +95,25 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-[#D4AF37]/15 py-4 px-6 flex flex-col gap-1 shadow-[0_8px_30px_rgba(0,0,0,0.06)] overflow-hidden"
+            transition={{ duration: 0.2 }}
+            className="md:hidden absolute top-full left-0 w-full bg-white border-b border-neutral-100 py-3 px-6 flex flex-col gap-0.5 overflow-hidden"
           >
             {navItems.map((item, i) => (
               <motion.button
                 key={item.id}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 12 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.05 }}
+                transition={{ delay: i * 0.04 }}
                 onClick={() => handleNavClick(item.id)}
-                className="text-right text-base text-slate-600 hover:text-[#B59129] hover:bg-[#D4AF37]/6 transition-all py-3 px-4 rounded-xl font-medium"
+                className="text-right text-[15px] text-neutral-600 hover:text-neutral-900 transition-colors py-2.5 px-3 rounded-lg font-medium hover:bg-neutral-50"
               >
                 {item.label}
               </motion.button>
             ))}
-            <div className="mt-2 pt-3 border-t border-slate-100">
+            <div className="mt-2 pt-3 border-t border-neutral-100">
               <button
                 onClick={() => handleNavClick('hero')}
-                className="w-full bg-gradient-to-r from-[#D4AF37] to-[#C9A42F] text-white py-3 rounded-xl font-bold text-center shadow-sm"
+                className="w-full bg-neutral-900 text-white py-2.5 rounded-lg font-semibold text-center text-[14px]"
               >
                 הצטרפו לקהילה
               </button>

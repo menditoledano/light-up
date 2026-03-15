@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Sun, Loader as Loader2 } from 'lucide-react';
+import { Loader as Loader2 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import type { LightupSpark, LightupEvent, LightupGalleryItem } from '@/lib/types';
 import Navbar from '@/components/landing/navbar';
@@ -44,24 +44,20 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           className="text-center"
         >
-          <div className="relative mb-4">
-            <Sun className="w-12 h-12 text-[#D4AF37] mx-auto" strokeWidth={1.5} />
-            <Loader2 className="w-5 h-5 text-[#B59129]/60 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-spin" />
-          </div>
-          <p className="text-sm text-slate-400">...</p>
+          <Loader2 className="w-5 h-5 text-neutral-300 mx-auto animate-spin" />
         </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A] overflow-x-hidden">
+    <div className="min-h-screen bg-white text-neutral-900 overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <VisionSection />
