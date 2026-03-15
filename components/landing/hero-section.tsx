@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Users, Calendar, TrendingUp } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 function scrollToSection(id: string) {
   const element = document.getElementById(id);
@@ -9,12 +9,6 @@ function scrollToSection(id: string) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
 }
-
-const stats = [
-  { icon: Users, value: '1,247+', label: 'חברי קהילה פעילים' },
-  { icon: TrendingUp, value: '89%', label: 'ציון מחוברות' },
-  { icon: Calendar, value: '156', label: 'אירועים בשנה' },
-];
 
 export default function HeroSection() {
   return (
@@ -126,38 +120,6 @@ export default function HeroSection() {
             לאירועים הקרובים
           </motion.button>
         </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.7 }}
-        className="relative z-10 mt-16 md:mt-20 w-full max-w-3xl mx-auto px-4"
-      >
-        <div className="bg-white/60 backdrop-blur-md border border-[#D4AF37]/12 rounded-2xl px-6 md:px-8 py-5 shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-            {stats.map((stat, i) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.4 + i * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37]/10 to-[#D4AF37]/5 flex items-center justify-center">
-                    <Icon size={18} className="text-[#B59129]" />
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xl font-bold text-[#1A1A1A] font-sans leading-none">{stat.value}</p>
-                    <p className="text-[11px] text-slate-400 font-medium font-sans mt-0.5">{stat.label}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
       </motion.div>
 
       <motion.div
