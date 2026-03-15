@@ -64,7 +64,7 @@ export default function HeroSection() {
           className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10"
         >
           כשעובדים מתחברים לשורשים שלהם, הם מביאים את המיטב. Lightup היא המקום
-          שבו זהות, ערכים ועשייה נפגשים -- ויוצרים משהו שגדול מכולנו.
+          שבו זהות, ערכים ועשייה נפגשים - ויוצרים משהו שגדול מכולנו.
         </motion.p>
 
         <motion.div
