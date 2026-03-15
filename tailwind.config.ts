@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['Heebo', 'system-ui', 'sans-serif'],
+        serif: ['Frank Ruhl Libre', 'David Libre', 'Georgia', 'serif'],
       },
       colors: {
         gold: {
