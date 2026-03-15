@@ -15,23 +15,23 @@ function EventCard({ event, index }: { event: LightupEvent; index: number }) {
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ x: event.is_special ? 0 : -4, boxShadow: '0 12px 35px rgba(45, 212, 191, 0.05)' }}
+      whileHover={{ x: event.is_special ? 0 : -4, boxShadow: '0 12px 35px rgba(212, 175, 55, 0.05)' }}
       className={`group flex gap-5 items-center p-5 rounded-xl border transition-all duration-300 cursor-pointer ${
         event.is_special
           ? 'bg-[#D4AF37]/[0.03] border-[#D4AF37]/15 hover:border-[#D4AF37]/30'
-          : 'bg-[#111827]/60 border-slate-800/60 hover:border-teal-500/20'
+          : 'bg-[#111827]/60 border-slate-800/60 hover:border-[#D4AF37]/20'
       }`}
     >
       <motion.div
         className={`p-3 rounded-xl text-center min-w-[72px] ${
           event.is_special
             ? 'bg-[#D4AF37]/10'
-            : 'bg-slate-800/40 group-hover:bg-teal-500/10'
+            : 'bg-slate-800/40 group-hover:bg-[#D4AF37]/10'
         } transition-colors`}
         whileHover={{ scale: 1.08 }}
         transition={{ duration: 0.2 }}
       >
-        <span className="block text-[11px] font-semibold uppercase tracking-wider text-teal-400 mb-0.5">
+        <span className="block text-[11px] font-semibold uppercase tracking-wider text-[#D4AF37] mb-0.5">
           {event.event_month}
         </span>
         <span className="block text-2xl font-extrabold text-slate-100 leading-none">
@@ -40,7 +40,7 @@ function EventCard({ event, index }: { event: LightupEvent; index: number }) {
       </motion.div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="text-[15px] font-bold text-slate-100 mb-1.5 group-hover:text-teal-400 transition-colors truncate">
+        <h3 className="text-[15px] font-bold text-slate-100 mb-1.5 group-hover:text-[#D4AF37] transition-colors truncate">
           {event.title}
         </h3>
         <div className="flex flex-wrap items-center gap-3 text-[13px]">
@@ -48,15 +48,15 @@ function EventCard({ event, index }: { event: LightupEvent; index: number }) {
             <MapPin size={12} />
             {event.location}
           </span>
-          <span className="text-teal-400 font-medium text-[11px] px-2 py-0.5 bg-teal-500/10 rounded">
+          <span className="text-[#D4AF37] font-medium text-[11px] px-2 py-0.5 bg-[#D4AF37]/10 rounded">
             {event.event_type}
           </span>
         </div>
       </div>
 
       <motion.button
-        className="hidden sm:flex items-center gap-1 px-4 py-2 bg-teal-500 text-[#0B0F1A] font-bold rounded-lg text-[13px] hover:bg-teal-400 transition-colors"
-        whileHover={{ scale: 1.05, boxShadow: '0 6px 20px rgba(45, 212, 191, 0.25)' }}
+        className="hidden sm:flex items-center gap-1 px-4 py-2 bg-[#D4AF37] text-[#0B0F1A] font-bold rounded-lg text-[13px] hover:bg-[#F0D060] transition-colors"
+        whileHover={{ scale: 1.05, boxShadow: '0 6px 20px rgba(212, 175, 55, 0.25)' }}
         whileTap={{ scale: 0.95 }}
       >
         RSVP <ChevronLeft size={12} />
@@ -69,7 +69,7 @@ export default function EventsSection({ events }: EventsSectionProps) {
   return (
     <section id="events" className="py-24 px-6 bg-[#0B0F1A] relative overflow-hidden">
       <motion.div
-        className="absolute top-0 left-1/4 w-[300px] h-[300px] rounded-full bg-teal-500/[0.03] blur-[100px] pointer-events-none"
+        className="absolute top-0 left-1/4 w-[300px] h-[300px] rounded-full bg-[#D4AF37]/[0.03] blur-[100px] pointer-events-none"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -82,7 +82,7 @@ export default function EventsSection({ events }: EventsSectionProps) {
           className="text-center mb-14"
         >
           <motion.div
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 text-teal-400 text-[12px] font-semibold tracking-wide uppercase mb-4"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[12px] font-semibold tracking-wide uppercase mb-4"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

@@ -18,24 +18,24 @@ function PillarCard({ icon, title, desc, index }: PillarProps) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ delay: index * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(45, 212, 191, 0.06)' }}
-      className="group relative bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-8 hover:border-teal-500/20 transition-all duration-300"
+      whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(212, 175, 55, 0.06)' }}
+      className="group relative bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-8 hover:border-[#D4AF37]/20 transition-all duration-300"
     >
       <motion.div
-        className="w-11 h-11 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 text-teal-400 group-hover:bg-teal-500/15 transition-colors"
+        className="w-11 h-11 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 text-[#D4AF37] group-hover:bg-[#D4AF37]/15 transition-colors"
         whileHover={{ rotate: [0, -8, 8, 0], scale: 1.1 }}
         transition={{ duration: 0.5 }}
       >
         {icon}
       </motion.div>
 
-      <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-teal-400 transition-colors">
+      <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-[#D4AF37] transition-colors">
         {title}
       </h3>
       <p className="text-slate-500 text-[15px] leading-relaxed">{desc}</p>
 
       <motion.div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-teal-500/30 to-transparent rounded-full"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent rounded-full"
         initial={{ width: 0 }}
         whileInView={{ width: '60%' }}
         viewport={{ once: true }}
@@ -76,7 +76,7 @@ export default function VisionSection() {
           className="text-center mb-16"
         >
           <motion.p
-            className="text-teal-400 text-[13px] font-semibold tracking-wide uppercase mb-3"
+            className="text-[#D4AF37] text-[13px] font-semibold tracking-wide uppercase mb-3"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

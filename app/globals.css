@@ -18,15 +18,15 @@
     --secondary-foreground: 210 20% 90%;
     --muted: 222 30% 12%;
     --muted-foreground: 215 15% 55%;
-    --accent: 174 60% 45%;
+    --accent: 43 68% 43%;
     --accent-foreground: 222 47% 6%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
     --border: 222 25% 16%;
     --input: 222 25% 16%;
-    --ring: 174 60% 45%;
+    --ring: 45 73% 52%;
     --chart-1: 45 73% 52%;
-    --chart-2: 174 60% 45%;
+    --chart-2: 43 68% 43%;
     --chart-3: 30 76% 50%;
     --chart-4: 50 60% 55%;
     --chart-5: 35 65% 48%;
@@ -57,7 +57,7 @@
   }
 
   ::selection {
-    background: rgba(45, 212, 191, 0.2);
+    background: rgba(212, 175, 55, 0.2);
     color: #F0F4F8;
   }
 }
@@ -70,25 +70,14 @@
     background-clip: text;
   }
 
-  .text-tech-gradient {
-    background: linear-gradient(135deg, #2DD4BF 0%, #06B6D4 50%, #2DD4BF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .glow-teal {
-    box-shadow: 0 0 20px rgba(45, 212, 191, 0.15), 0 0 60px rgba(45, 212, 191, 0.05);
-  }
-
   .glow-gold {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.15), 0 0 60px rgba(212, 175, 55, 0.05);
   }
 
   .bg-grid-pattern {
     background-image:
-      linear-gradient(rgba(45, 212, 191, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(45, 212, 191, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(212, 175, 55, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 175, 55, 0.025) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -102,11 +91,11 @@
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: rgba(45, 212, 191, 0.2);
+    background: rgba(212, 175, 55, 0.2);
     border-radius: 2px;
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: rgba(45, 212, 191, 0.35);
+    background: rgba(212, 175, 55, 0.35);
   }
 }

@@ -57,7 +57,7 @@ export default function Navbar() {
             />
           ) : (
             <span className="text-xl font-extrabold tracking-tight text-white">
-              LIGHT<span className="text-teal-400">UP</span>
+              LIGHT<span className="text-[#D4AF37]">UP</span>
             </span>
           )}
         </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className="text-slate-500 hover:text-teal-400 transition-colors px-3.5 py-2 text-[13px] font-medium rounded-lg hover:bg-white/[0.03]"
+              className="text-slate-500 hover:text-[#D4AF37] transition-colors px-3.5 py-2 text-[13px] font-medium rounded-lg hover:bg-white/[0.03]"
             >
               {item.label}
             </button>
@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="w-px h-5 bg-slate-800 mx-3" />
           <button
             onClick={() => handleNavClick('hero')}
-            className="bg-teal-500 text-[#0B0F1A] px-5 py-2 rounded-lg font-bold text-[13px] hover:bg-teal-400 transition-colors"
+            className="bg-[#D4AF37] text-[#0B0F1A] px-5 py-2 rounded-lg font-bold text-[13px] hover:bg-[#F0D060] transition-colors"
           >
             הצטרפו לקהילה
           </button>
@@ -105,7 +105,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.04 }}
                 onClick={() => handleNavClick(item.id)}
-                className="text-right text-[15px] text-slate-400 hover:text-teal-400 transition-colors py-2.5 px-3 rounded-lg font-medium hover:bg-white/[0.03]"
+                className="text-right text-[15px] text-slate-400 hover:text-[#D4AF37] transition-colors py-2.5 px-3 rounded-lg font-medium hover:bg-white/[0.03]"
               >
                 {item.label}
               </motion.button>
@@ -113,7 +113,7 @@ export default function Navbar() {
             <div className="mt-2 pt-3 border-t border-slate-800/60">
               <button
                 onClick={() => handleNavClick('hero')}
-                className="w-full bg-teal-500 text-[#0B0F1A] py-2.5 rounded-lg font-bold text-center text-[14px]"
+                className="w-full bg-[#D4AF37] text-[#0B0F1A] py-2.5 rounded-lg font-bold text-center text-[14px]"
               >
                 הצטרפו לקהילה
               </button>

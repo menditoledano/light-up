@@ -16,7 +16,7 @@ function GalleryCard({ item, index }: { item: LightupGalleryItem; index: number 
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -4 }}
-      className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer border border-slate-800/40 hover:border-teal-500/20 transition-colors"
+      className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer border border-slate-800/40 hover:border-[#D4AF37]/20 transition-colors"
     >
       {item.image_url ? (
         <img
@@ -46,8 +46,8 @@ function GalleryCard({ item, index }: { item: LightupGalleryItem; index: number 
           {item.date_label}
         </p>
         <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
-          <div className="w-9 h-9 rounded-lg bg-teal-500/20 backdrop-blur-sm flex items-center justify-center">
-            <Eye size={15} className="text-teal-400" />
+          <div className="w-9 h-9 rounded-lg bg-[#D4AF37]/20 backdrop-blur-sm flex items-center justify-center">
+            <Eye size={15} className="text-[#D4AF37]" />
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function GallerySection({ items }: GallerySectionProps) {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.p
-              className="text-teal-400 text-[13px] font-semibold tracking-wide uppercase mb-3"
+              className="text-[#D4AF37] text-[13px] font-semibold tracking-wide uppercase mb-3"
               initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function GallerySection({ items }: GallerySectionProps) {
             </motion.p>
           </motion.div>
           <motion.button
-            className="text-slate-300 font-semibold flex items-center gap-1.5 text-[14px] border border-slate-700 px-5 py-2.5 rounded-lg hover:border-teal-500/40 hover:text-teal-400 transition-all"
+            className="text-slate-300 font-semibold flex items-center gap-1.5 text-[14px] border border-slate-700 px-5 py-2.5 rounded-lg hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all"
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

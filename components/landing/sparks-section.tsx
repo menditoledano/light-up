@@ -15,14 +15,11 @@ function SparkCard({ spark, index }: { spark: LightupSpark; index: number }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -6, boxShadow: spark.is_highlight
-        ? '0 20px 40px rgba(212, 175, 55, 0.08)'
-        : '0 20px 40px rgba(45, 212, 191, 0.06)'
-      }}
+      whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(212, 175, 55, 0.08)' }}
       className={`group bg-[#111827]/80 border rounded-2xl p-6 transition-all duration-300 cursor-pointer ${
         spark.is_highlight
           ? 'border-[#D4AF37]/20 hover:border-[#D4AF37]/40'
-          : 'border-slate-800/60 hover:border-teal-500/20'
+          : 'border-slate-800/60 hover:border-[#D4AF37]/20'
       }`}
     >
       <div className="flex justify-between items-center mb-5">
@@ -49,7 +46,7 @@ function SparkCard({ spark, index }: { spark: LightupSpark; index: number }) {
         )}
       </div>
 
-      <h3 className="text-lg font-bold text-slate-100 mb-4 leading-snug group-hover:text-teal-400 transition-colors">
+      <h3 className="text-lg font-bold text-slate-100 mb-4 leading-snug group-hover:text-[#D4AF37] transition-colors">
         {spark.title}
       </h3>
 
@@ -59,7 +56,7 @@ function SparkCard({ spark, index }: { spark: LightupSpark; index: number }) {
           {spark.read_time}
         </div>
         <motion.div
-          className="flex items-center gap-1 text-teal-400 text-[13px] font-semibold"
+          className="flex items-center gap-1 text-[#D4AF37] text-[13px] font-semibold"
           initial={{ opacity: 0, x: -8 }}
           whileHover={{ x: -3 }}
           animate={{ opacity: 0 }}
@@ -88,7 +85,7 @@ export default function SparksSection({ sparks }: SparksSectionProps) {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.p
-              className="text-teal-400 text-[13px] font-semibold tracking-wide uppercase mb-3"
+              className="text-[#D4AF37] text-[13px] font-semibold tracking-wide uppercase mb-3"
               initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -117,7 +114,7 @@ export default function SparksSection({ sparks }: SparksSectionProps) {
             </motion.p>
           </motion.div>
           <motion.button
-            className="text-slate-300 font-semibold flex items-center gap-1.5 text-[14px] border border-slate-700 px-5 py-2.5 rounded-lg hover:border-teal-500/40 hover:text-teal-400 transition-all"
+            className="text-slate-300 font-semibold flex items-center gap-1.5 text-[14px] border border-slate-700 px-5 py-2.5 rounded-lg hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all"
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

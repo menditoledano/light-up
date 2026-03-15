@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#060911] pt-20 pb-10 px-6 relative overflow-hidden">
       <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] rounded-full bg-teal-500/[0.03] blur-[100px] pointer-events-none"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] rounded-full bg-[#D4AF37]/[0.03] blur-[100px] pointer-events-none"
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -47,7 +47,7 @@ export default function Footer() {
             />
           ) : (
             <span className="text-2xl font-extrabold text-white">
-              LIGHT<span className="text-teal-400">UP</span>
+              LIGHT<span className="text-[#D4AF37]">UP</span>
             </span>
           )}
 
@@ -71,12 +71,12 @@ export default function Footer() {
           </motion.p>
 
           <motion.button
-            className="px-7 py-3 bg-teal-500 text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-teal-400 transition-colors inline-flex items-center gap-2"
+            className="px-7 py-3 bg-[#D4AF37] text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-[#F0D060] transition-colors inline-flex items-center gap-2"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            whileHover={{ scale: 1.04, boxShadow: '0 10px 30px rgba(45, 212, 191, 0.3)' }}
+            whileHover={{ scale: 1.04, boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)' }}
             whileTap={{ scale: 0.97 }}
           >
             הגש בקשת הצטרפות <ChevronLeft size={16} />
@@ -96,7 +96,7 @@ export default function Footer() {
                 <motion.button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-slate-600 hover:text-teal-400 transition-colors text-[13px] font-medium"
+                  className="text-slate-600 hover:text-[#D4AF37] transition-colors text-[13px] font-medium"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

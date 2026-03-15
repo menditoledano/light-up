@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A] via-transparent to-[#0B0F1A] pointer-events-none" />
 
       <motion.div
-        className="absolute top-32 right-[15%] w-80 h-80 rounded-full bg-teal-500/5 blur-[100px] pointer-events-none"
+        className="absolute top-32 right-[15%] w-80 h-80 rounded-full bg-[#D4AF37]/5 blur-[100px] pointer-events-none"
         animate={{ y: [0, -20, 0], scale: [1, 1.05, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -30,7 +30,7 @@ export default function HeroSection() {
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-teal-400/[0.02] blur-[120px] pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#D4AF37]/[0.02] blur-[120px] pointer-events-none"
         animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -45,10 +45,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6, type: 'spring', stiffness: 150 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[13px] font-semibold mb-8"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] text-[13px] font-semibold mb-8"
         >
           <motion.span
-            className="w-1.5 h-1.5 rounded-full bg-teal-400"
+            className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"
             animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -92,15 +92,15 @@ export default function HeroSection() {
         >
           <motion.button
             onClick={() => scrollToSection('vision')}
-            className="w-full sm:w-auto px-7 py-3 bg-teal-500 text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-teal-400 transition-colors"
-            whileHover={{ scale: 1.03, boxShadow: '0 8px 30px rgba(45, 212, 191, 0.3)' }}
+            className="w-full sm:w-auto px-7 py-3 bg-[#D4AF37] text-[#0B0F1A] font-bold rounded-lg text-[15px] hover:bg-[#F0D060] transition-colors"
+            whileHover={{ scale: 1.03, boxShadow: '0 8px 30px rgba(212, 175, 55, 0.3)' }}
             whileTap={{ scale: 0.97 }}
           >
             גלו את הקהילה
           </motion.button>
           <motion.button
             onClick={() => scrollToSection('events')}
-            className="w-full sm:w-auto px-7 py-3 bg-transparent border border-slate-700 text-slate-300 font-semibold rounded-lg text-[15px] hover:border-teal-500/40 hover:text-teal-400 transition-all"
+            className="w-full sm:w-auto px-7 py-3 bg-transparent border border-slate-700 text-slate-300 font-semibold rounded-lg text-[15px] hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -113,7 +113,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.5 }}
-        className="absolute bottom-8 cursor-pointer text-slate-600 hover:text-teal-400 transition-colors"
+        className="absolute bottom-8 cursor-pointer text-slate-600 hover:text-[#D4AF37] transition-colors"
         onClick={() => scrollToSection('vision')}
       >
         <motion.div

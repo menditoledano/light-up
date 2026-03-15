@@ -20,13 +20,13 @@ export default function SectionDivider({ variant = 'dark-a-to-b' }: SectionDivid
           viewport={{ once: true, margin: '-10px' }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="w-16 sm:w-32 h-px bg-gradient-to-r from-transparent to-teal-500/15" />
+          <div className="w-16 sm:w-32 h-px bg-gradient-to-r from-transparent to-[#D4AF37]/15" />
           <motion.div
-            className="w-1 h-1 rounded-full bg-teal-400/40"
+            className="w-1 h-1 rounded-full bg-[#D4AF37]/40"
             animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0.7, 0.3] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           />
-          <div className="w-16 sm:w-32 h-px bg-gradient-to-l from-transparent to-teal-500/15" />
+          <div className="w-16 sm:w-32 h-px bg-gradient-to-l from-transparent to-[#D4AF37]/15" />
         </motion.div>
       </div>
     </div>

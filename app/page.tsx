@@ -51,7 +51,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           className="text-center"
         >
-          <Loader2 className="w-5 h-5 text-teal-500/50 mx-auto animate-spin" />
+          <Loader2 className="w-5 h-5 text-[#D4AF37]/50 mx-auto animate-spin" />
         </motion.div>
       </div>
     );

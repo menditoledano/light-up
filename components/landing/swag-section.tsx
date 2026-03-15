@@ -17,17 +17,17 @@ function SwagItem({ icon: Icon, name, desc, index }: { icon: typeof Gift; name: 
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-30px' }}
       transition={{ duration: 0.5, delay: 0.1 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -5, boxShadow: '0 15px 35px rgba(45, 212, 191, 0.06)' }}
-      className="group bg-[#0B0F1A]/60 border border-slate-800/40 rounded-xl p-5 text-center hover:border-teal-500/20 transition-all duration-300 cursor-pointer"
+      whileHover={{ y: -5, boxShadow: '0 15px 35px rgba(212, 175, 55, 0.06)' }}
+      className="group bg-[#0B0F1A]/60 border border-slate-800/40 rounded-xl p-5 text-center hover:border-[#D4AF37]/20 transition-all duration-300 cursor-pointer"
     >
       <motion.div
-        className="w-11 h-11 rounded-xl bg-teal-500/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-teal-500/15 transition-colors"
+        className="w-11 h-11 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-[#D4AF37]/15 transition-colors"
         whileHover={{ rotate: [0, -10, 10, 0], scale: 1.15 }}
         transition={{ duration: 0.4 }}
       >
-        <Icon size={22} className="text-teal-400" strokeWidth={1.5} />
+        <Icon size={22} className="text-[#D4AF37]" strokeWidth={1.5} />
       </motion.div>
-      <h4 className="font-bold text-slate-100 text-[14px] mb-1 group-hover:text-teal-400 transition-colors">
+      <h4 className="font-bold text-slate-100 text-[14px] mb-1 group-hover:text-[#D4AF37] transition-colors">
         {name}
       </h4>
       <p className="text-slate-500 text-[13px]">{desc}</p>
@@ -52,7 +52,7 @@ export default function SwagSection() {
       >
         <motion.div
           className="bg-[#111827]/80 border border-slate-800/60 rounded-2xl p-8 md:p-12"
-          whileHover={{ boxShadow: '0 20px 50px rgba(45, 212, 191, 0.04)' }}
+          whileHover={{ boxShadow: '0 20px 50px rgba(212, 175, 55, 0.04)' }}
           transition={{ duration: 0.3 }}
         >
           <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
