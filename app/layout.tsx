@@ -2,13 +2,13 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Lightup | קהילת עובדים',
+  title: 'Lightup | מאירים את הסביבה',
   description: 'מאירים את הדרך בזהות וערכים משותפים - מרחב בטוח לחיבור לזהות היהודית ולמורשת המשותפת',
   icons: {
     icon: '/favicon.svg',
   },
   openGraph: {
-    title: 'Lightup | קהילת עובדים',
+    title: 'Lightup | מאירים את הסביבה',
     description: 'מאירים את הדרך בזהות וערכים משותפים - מרחב בטוח לחיבור לזהות היהודית ולמורשת המשותפת',
     images: ['/og-image.svg'],
     locale: 'he_IL',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lightup | קהילת עובדים',
+    title: 'Lightup | מאירים את הסביבה',
     description: 'מאירים את הדרך בזהות וערכים משותפים',
     images: ['/og-image.svg'],
   },
