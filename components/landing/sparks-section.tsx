@@ -77,7 +77,7 @@ function SparkCard({ spark, index }: { spark: LightupSpark; index: number }) {
 
 export default function SparksSection({ sparks }: SparksSectionProps) {
   return (
-    <section id="sparks" className="py-24 px-6">
+    <section id="sparks" className="py-24 px-6 bg-[#FAFAF9]">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <motion.div

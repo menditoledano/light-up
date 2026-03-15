@@ -67,7 +67,7 @@ function EventCard({ event, index }: { event: LightupEvent; index: number }) {
 
 export default function EventsSection({ events }: EventsSectionProps) {
   return (
-    <section id="events" className="py-24 px-6 bg-neutral-50">
+    <section id="events" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -7,7 +7,7 @@ export default function TorahSection() {
   return (
     <section
       id="torah"
-      className="py-24 px-6 bg-neutral-50"
+      className="py-24 px-6 bg-white"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

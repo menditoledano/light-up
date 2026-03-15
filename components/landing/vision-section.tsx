@@ -65,7 +65,7 @@ const pillars = [
 
 export default function VisionSection() {
   return (
-    <section id="vision" className="py-24 px-6">
+    <section id="vision" className="py-24 px-6 bg-[#FAFAF9]">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

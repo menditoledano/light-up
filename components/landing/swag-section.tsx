@@ -37,7 +37,7 @@ function SwagItem({ icon: Icon, name, desc, index }: { icon: typeof Gift; name: 
 
 export default function SwagSection() {
   return (
-    <section id="swag" className="py-24 px-6 bg-neutral-50">
+    <section id="swag" className="py-24 px-6 bg-white">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

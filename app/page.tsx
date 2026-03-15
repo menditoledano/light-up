@@ -14,6 +14,7 @@ import EventsSection from '@/components/landing/events-section';
 import GallerySection from '@/components/landing/gallery-section';
 import SwagSection from '@/components/landing/swag-section';
 import Footer from '@/components/landing/footer';
+import SectionDivider from '@/components/landing/section-divider';
 
 export default function Home() {
   const [sparks, setSparks] = useState<LightupSpark[]>([]);
@@ -60,12 +61,19 @@ export default function Home() {
     <div className="min-h-screen bg-white text-neutral-900 overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <SectionDivider variant="light-to-muted" />
       <VisionSection />
+      <SectionDivider variant="muted-to-light" />
       <TorahSection />
+      <SectionDivider variant="light-to-muted" />
       <SparksSection sparks={sparks} />
+      <SectionDivider variant="muted-to-light" />
       <EventsSection events={events} />
+      <SectionDivider variant="light-to-muted" />
       <GallerySection items={gallery} />
+      <SectionDivider variant="muted-to-light" />
       <SwagSection />
+      <SectionDivider variant="light-to-dark" />
       <Footer />
     </div>
   );
