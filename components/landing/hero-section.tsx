@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import HeroLogo from './hero-logo';
 
 function scrollToSection(id: string) {
   const element = document.getElementById(id);
@@ -34,6 +35,10 @@ export default function HeroSection() {
         animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
+
+      <div className="relative z-10 w-full px-4 sm:px-8">
+        <HeroLogo />
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.97 }}
