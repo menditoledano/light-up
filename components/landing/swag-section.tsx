@@ -34,40 +34,59 @@ export default function SwagSection() {
   return (
     <section id="swag" className="py-10 sm:py-14 px-4 sm:px-6 bg-[#0B0F1A] relative overflow-hidden">
       <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-[#D4AF37]/[0.03] blur-[100px] pointer-events-none" />
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-60px' }}
-        transition={{ duration: 0.5 }}
-        className="max-w-5xl mx-auto relative z-10"
-      >
-        <div className="bg-[#111827]/80 border border-slate-800/60 rounded-xl sm:rounded-2xl p-5 sm:p-8 md:p-12 hover:shadow-[0_20px_50px_rgba(212,175,55,0.04)] transition-shadow duration-300">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-10">
-            <div className="lg:w-1/2 space-y-4 sm:space-y-5 text-center lg:text-right">
-              <div className="inline-flex p-2.5 sm:p-3 bg-[#D4AF37]/10 rounded-xl">
-                <ShoppingBag size={24} className="text-[#D4AF37] sm:w-7 sm:h-7" strokeWidth={1.5} />
-              </div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-100">
-                חנות הקהילה
-              </h2>
-              <p className="text-slate-400 text-[14px] sm:text-[15px] leading-relaxed">
-                ריכזנו עבורכם פלטפורמה אחת לציון חגי ישראל ואירועי שיא בארגון. כאן
-                תוכלו להזמין במרוכז מארזי שי, פריטי אווירה לחלל המשרד, וכיבוד מותאם
-                למפגשי גיבוש קהילתיים שפתוחים לכולם.
-              </p>
-              <button className="inline-flex items-center gap-2 bg-[#D4AF37] text-[#0B0F1A] px-5 sm:px-6 py-2 sm:py-2.5 rounded-lg font-bold text-[13px] sm:text-[14px] hover:bg-[#F0D060] transition-all hover:shadow-[0_8px_25px_rgba(212,175,55,0.25)]">
-                למעבר לחנות המרכזית <ExternalLink size={14} className="sm:w-[15px] sm:h-[15px]" />
-              </button>
-            </div>
+      <div className="max-w-5xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10 sm:mb-12"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[11px] sm:text-[12px] font-semibold tracking-wide uppercase mb-4">
+            <ShoppingBag size={14} />
+            קהילה וחגים
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 mb-3 sm:mb-4">
+            חנות הקהילה
+          </h2>
+          <p className="text-slate-500 max-w-lg mx-auto text-[14px] sm:text-[15px] leading-relaxed px-2 sm:px-0">
+            פלטפורמה אחת לציון חגי ישראל ואירועי שיא בארגון.
+          </p>
+          <div className="mt-6 flex items-center gap-3 justify-center">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]/40" />
+            <div className="w-2 h-2 rounded-full bg-[#D4AF37]/60" />
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]/40" />
+          </div>
+        </motion.div>
 
-            <div className="lg:w-1/2 grid grid-cols-2 gap-2 sm:gap-3 w-full">
-              {swagCategories.map((item, i) => (
-                <SwagItem key={item.name} icon={item.icon} name={item.name} desc={item.desc} index={i} />
-              ))}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <div className="bg-[#111827]/80 border border-slate-800/60 rounded-xl sm:rounded-2xl p-5 sm:p-8 md:p-10 hover:shadow-[0_20px_50px_rgba(212,175,55,0.04)] transition-shadow duration-300">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-10">
+              <div className="lg:w-1/2 space-y-4 sm:space-y-5 text-center lg:text-right">
+                <p className="text-slate-400 text-[14px] sm:text-[15px] leading-relaxed">
+                  ריכזנו עבורכם פלטפורמה אחת לציון חגי ישראל ואירועי שיא בארגון. כאן
+                  תוכלו להזמין במרוכז מארזי שי, פריטי אווירה לחלל המשרד, וכיבוד מותאם
+                  למפגשי גיבוש קהילתיים שפתוחים לכולם.
+                </p>
+                <button className="inline-flex items-center gap-2 bg-[#D4AF37] text-[#0B0F1A] px-5 sm:px-6 py-2 sm:py-2.5 rounded-lg font-bold text-[13px] sm:text-[14px] hover:bg-[#F0D060] transition-all hover:shadow-[0_8px_25px_rgba(212,175,55,0.25)]">
+                  למעבר לחנות המרכזית <ExternalLink size={14} className="sm:w-[15px] sm:h-[15px]" />
+                </button>
+              </div>
+
+              <div className="lg:w-1/2 grid grid-cols-2 gap-2 sm:gap-3 w-full">
+                {swagCategories.map((item, i) => (
+                  <SwagItem key={item.name} icon={item.icon} name={item.name} desc={item.desc} index={i} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

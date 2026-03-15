@@ -68,18 +68,23 @@ export default function EventsSection({ events }: EventsSectionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-8 sm:mb-14"
+          className="text-center mb-10 sm:mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[11px] sm:text-[12px] font-semibold tracking-wide uppercase mb-3 sm:mb-4">
-            <Calendar size={13} className="sm:w-3.5 sm:h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[11px] sm:text-[12px] font-semibold tracking-wide uppercase mb-4">
+            <Calendar size={14} />
             לוח אירועים
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 mb-2 sm:mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 mb-3 sm:mb-4">
             מאירים ביחד
           </h2>
-          <p className="text-slate-500 max-w-lg mx-auto text-[14px] sm:text-[15px] px-2 sm:px-0">
+          <p className="text-slate-500 max-w-lg mx-auto text-[14px] sm:text-[15px] leading-relaxed px-2 sm:px-0">
             המפגשים הפיזיים והווירטואליים שיוצרים את הקהילה שלנו.
           </p>
+          <div className="mt-6 flex items-center gap-3 justify-center">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]/40" />
+            <div className="w-2 h-2 rounded-full bg-[#D4AF37]/60" />
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]/40" />
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">

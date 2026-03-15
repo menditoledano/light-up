@@ -64,15 +64,20 @@ export default function VisionSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10 sm:mb-16"
         >
-          <p className="text-[#D4AF37] text-[12px] sm:text-[13px] font-semibold tracking-wide uppercase mb-2 sm:mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[11px] sm:text-[12px] font-semibold tracking-wide uppercase mb-4">
             מי אנחנו
-          </p>
+          </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 mb-3 sm:mb-4">
             השאיפות שלנו
           </h2>
           <p className="text-slate-500 max-w-lg mx-auto text-[14px] sm:text-[15px] leading-relaxed px-2 sm:px-0">
             בנינו את Lightup על בסיס שלושה עמודי תווך שנועדו להעצים כל עובד ועובדת.
           </p>
+          <div className="mt-6 flex items-center gap-3 justify-center">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]/40" />
+            <div className="w-2 h-2 rounded-full bg-[#D4AF37]/60" />
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]/40" />
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">

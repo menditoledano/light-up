@@ -61,25 +61,33 @@ export default function SparksSection({ sparks }: SparksSectionProps) {
     <section id="sparks" className="py-10 sm:py-14 px-4 sm:px-6 bg-[#0D1220] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-30" />
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12 gap-4 sm:gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-[#D4AF37] text-[12px] sm:text-[13px] font-semibold tracking-wide uppercase mb-2 sm:mb-3">
-              תוכן מקצועי ואישי
-            </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100">
-              ניצוצות של השראה
-            </h2>
-            <p className="text-slate-500 mt-2 sm:mt-3 max-w-md text-[14px] sm:text-[15px] leading-relaxed">
-              מאמרי &lsquo;ספארק 10&rsquo; - קריאה קצרה של עד 2 דקות שנותנת ערך, ידע
-              וכלים לשילוב בין זהות, ערכים וקריירה.
-            </p>
-          </motion.div>
-          <button className="text-slate-300 font-semibold flex items-center gap-1.5 text-[13px] sm:text-[14px] border border-slate-700 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all w-full sm:w-auto justify-center sm:justify-start">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10 sm:mb-14"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-[11px] sm:text-[12px] font-semibold tracking-wide uppercase mb-4">
+            <Sparkles size={14} />
+            תוכן מקצועי ואישי
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 mb-3 sm:mb-4">
+            ניצוצות של השראה
+          </h2>
+          <p className="text-slate-500 max-w-lg mx-auto text-[14px] sm:text-[15px] leading-relaxed px-2 sm:px-0">
+            מאמרי &lsquo;ספארק 10&rsquo; - קריאה קצרה של עד 2 דקות שנותנת ערך, ידע
+            וכלים לשילוב בין זהות, ערכים וקריירה.
+          </p>
+          <div className="mt-6 flex items-center gap-3 justify-center">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]/40" />
+            <div className="w-2 h-2 rounded-full bg-[#D4AF37]/60" />
+            <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]/40" />
+          </div>
+        </motion.div>
+
+        <div className="flex justify-center mb-8">
+          <button className="text-slate-300 font-semibold flex items-center gap-1.5 text-[13px] sm:text-[14px] border border-slate-700 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all">
             לכל המאמרים <ChevronLeft size={16} />
           </button>
         </div>
