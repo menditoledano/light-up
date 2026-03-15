@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, Eye } from 'lucide-react';
 
 const galleryItems = [
-  { id: '1', title: 'הרמת כוסית לפסח', date_label: 'מרץ 2024', image_url: '/IMG_0732.jpg' },
+  { id: '1', title: 'הדלקת נרות חנוכה', date_label: 'מרץ 2024', image_url: '/IMG_0732.jpg' },
   { id: '2', title: 'הדלקת נרות חנוכה', date_label: 'דצמבר 2023', image_url: '/IMG_6087.jpg' },
-  { id: '3', title: 'מפגש נטוורקינג וחיבורים', date_label: 'ינואר 2024', image_url: '/IMG_9164.JPG' },
-  { id: '4', title: 'חלוקת מצה שמורה לכל העובדים', date_label: 'אפריל 2024', image_url: '/e104249c-8acc-4919-950f-aac3e4a01ce7.jpg' },
+  { id: '3', title: 'חלוקת מצה שמורה לעובדים', date_label: 'ינואר 2024', image_url: '/IMG_9164.JPG' },
+  { id: '4', title: 'ערכה לראש השנה', date_label: 'אפריל 2024', image_url: '/e104249c-8acc-4919-950f-aac3e4a01ce7.jpg' },
 ];
 
 type GalleryItem = typeof galleryItems[number];
