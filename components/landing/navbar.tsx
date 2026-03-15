@@ -4,7 +4,46 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-export const LOGO_URL = 'https://iili.io/qGHjtQ1.jpg';
+export function LightupLogo({ size = 36 }: { size?: number }) {
+  return (
+    <div className="flex items-center gap-2.5">
+      <svg
+        viewBox="0 0 48 48"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <circle
+          cx="24"
+          cy="24"
+          r="20"
+          stroke="#D4AF37"
+          strokeWidth="0.75"
+          opacity="0.3"
+        />
+        <path
+          d="M24 12C24 12 18 20 18 28C18 31.3 20.7 34 24 34C27.3 34 30 31.3 30 28C30 20 24 12 24 12Z"
+          stroke="#D4AF37"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+        <circle
+          cx="24"
+          cy="27"
+          r="2.5"
+          fill="#D4AF37"
+          opacity="0.7"
+        />
+      </svg>
+      <span className="text-lg font-extrabold tracking-tight leading-none">
+        <span className="text-slate-100">LIGHT</span>
+        <span className="text-[#D4AF37]">UP</span>
+      </span>
+    </div>
+  );
+}
 
 const navItems = [
   { id: 'vision', label: 'החזון שלנו' },
@@ -49,17 +88,7 @@ export default function Navbar() {
           className="flex items-center gap-3 cursor-pointer"
           onClick={() => scrollToSection('hero')}
         >
-          {LOGO_URL ? (
-            <img
-              src={LOGO_URL}
-              alt="Lightup Logo"
-              className="h-9 w-auto object-contain"
-            />
-          ) : (
-            <span className="text-xl font-extrabold tracking-tight text-white">
-              LIGHT<span className="text-[#D4AF37]">UP</span>
-            </span>
-          )}
+          <LightupLogo size={32} />
         </div>
 
         <div className="hidden md:flex items-center gap-0.5">

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ChevronLeft } from 'lucide-react';
-import { LOGO_URL } from './navbar';
+import { LightupLogo } from './navbar';
 
 const footerLinks = [
   { label: 'החזון שלנו', id: 'vision' },
@@ -35,21 +35,15 @@ export default function Footer() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center space-y-6"
         >
-          {LOGO_URL ? (
-            <motion.img
-              src={LOGO_URL}
-              alt="Lightup Logo"
-              className="h-12 w-auto mx-auto object-contain"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            />
-          ) : (
-            <span className="text-2xl font-extrabold text-white">
-              LIGHT<span className="text-[#D4AF37]">UP</span>
-            </span>
-          )}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="flex justify-center"
+          >
+            <LightupLogo size={44} />
+          </motion.div>
 
           <motion.h2
             className="text-2xl md:text-3xl font-extrabold text-white"
